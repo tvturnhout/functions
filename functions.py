@@ -7,3 +7,11 @@ def check_zero_sums(values, sum_goal=0):
             if sum(subset) == sum_goal:
                 zero_sums.append([values.index(item) for item in subset])
     return zero_sums
+
+
+# Pipy Releases
+
+pip install twine
+rmdir /S /Q dist
+python setup.py sdist bdist_wheel
+twine upload dist/*
